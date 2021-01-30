@@ -10,7 +10,7 @@ const productionFormats = ["avif", "webp", "jpeg"];
 const picture = (eleventyConfig) => {
   eleventyConfig.addShortcode(
     "picture",
-    async function (src, alt, sizes = "100vw", lazy = true, classes) {
+    async function (src, alt, sizes = "100vw", lazy = true) {
       if (alt === undefined)
         throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
 
@@ -37,11 +37,8 @@ const picture = (eleventyConfig) => {
         })
         .join("\n")}
         <img
-          class="min-w-full h-auto"
           src="${lowsrc.url}"
           alt="${alt}"
-          height="${lowsrc.height}"
-          width="${lowsrc.width}"
           ${lazy && `loading="lazy"`}
           >
       </picture>`;

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html
-    class="font-body text-dark dark:text-light bg-light
-        dark:bg-dark "
-    lang="en">
+<html lang="en" class="font-body text-dark dark:text-light bg-light dark:bg-dark ">
     {% render 'head', site: site, page: page, title: title %}
-    <body class="relative">
+    <body
+        class="relative">
         {% render 'ie-notice'%}
         {% render 'skip-to-content' %}
         {% render 'back-to-top' %}
@@ -16,8 +14,6 @@
         <main class="min-h-screen pt-8 mb-6" id="main">
             {{ content }}
         </main>
-        {% comment %}
         {% render 'footer', builtBy: site.builtBy, navigation: navigation_footer %}
-        {% endcomment %}
     </body>
 </html>
