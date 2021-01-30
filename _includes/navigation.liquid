@@ -15,14 +15,19 @@
         id="menuItems">
         {% for item in navigation %}
             {% if page.filePathStem == item.key %}
-                {% assign activeClasses = 'underline'%}
+                {% assign classes = 'lg:border-b-2 lg:border-dashed lg:border-dark' %}
                 {% assign currentAttribute = 'aria-current="page"' %}
             {% else %}
-                {% assign activeClasses = null %}
+                {% assign classes = 'hover:translate-x-2' %}
                 {% assign currentAttribute = null %}
             {% endif %}
-            <li class="py-2 lg:px-4 lg:first:pl-0 {{activeClasses}}" {{currentAttribute}}>
-                <a href="{{item.key}}">{{item.title}}</a>
+            <li class="py-2 lg:px-4 lg:first:pl-0" {{currentAttribute}}>
+                <a class="transform transition-transform flex items-center lg:hover:translate-x-0 {{classes}}" href="{{item.key}}">
+                    {{item.title}}<span class="pl-3 text-xs italic lg:hidden">
+                        {% if currentAttribute %}&#10232; You are here
+                        {% endif %}
+                    </span>
+                </a>
             </li>
         {% endfor %}
     </ul>
