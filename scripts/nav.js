@@ -52,10 +52,6 @@ class Nav {
     this.elements.toggle.setAttribute("aria-expanded", "true");
     this.toggleIcons();
     this.elements.linkList.classList.remove("hidden");
-<<<<<<< HEAD
-=======
-    this.elements.linkList.classList.toggle("animate-fade-in");
->>>>>>> parent of 14b6e9e... revamp, first commit
   }
 
   close() {
