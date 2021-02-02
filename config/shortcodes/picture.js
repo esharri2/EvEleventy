@@ -37,9 +37,12 @@ const picture = (eleventyConfig) => {
         })
         .join("\n")}
         <img
+          class="max-w-full"
           src="${lowsrc.url}"
           alt="${alt}"
           ${lazy && `loading="lazy"`}
+          height="${lowsrc.height}"
+          widht="${lowsrc.width}"
           >
       </picture>`;
     }
