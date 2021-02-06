@@ -1,0 +1,32 @@
+.md h2, h3, h4, h5 {
+   @apply font-display my-4 text-2xl;
+}
+
+.md h3 {
+    @apply text-xl;
+}
+
+.md h4 {
+    @apply text-lg italic;
+}
+
+.md blockquote {
+    @apply border-l border-dark-darkened dark:border-light-darkened bg-dark text-light dark:bg-light dark:text-dark my-4 mx-2 p-2;
+
+}
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: inherit;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p:first-child {
+  display: inline;
+}
+

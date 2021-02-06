@@ -1,6 +1,8 @@
+const easing = "linear";
 const colors = {
   spaceCadet: "#2E294E",
   babyPink: "#E8C1C5",
+  gray: "#e7e7e7",
 };
 
 module.exports = {
@@ -31,6 +33,7 @@ module.exports = {
       "dark-darkened": "#161427",
       light: colors.babyPink,
       "light-darkened": "#b5434f",
+      gray: colors.gray,
     },
     container: {
       center: true,
@@ -59,12 +62,21 @@ module.exports = {
     },
     extend: {
       animation: {
-        "fade-in": "fadeIn .2s linear",
+        "fade-in": `fadeIn .2s ${easing}`,
+        "slide-left": `slideLeft .2s ${easing}`,
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        slideLeft: {
+          "0%": {
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
         },
       },
     },
