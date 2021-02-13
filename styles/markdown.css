@@ -12,7 +12,36 @@
 
 .md blockquote {
     @apply border-l border-dark-darkened dark:border-light-darkened bg-dark text-light dark:bg-light dark:text-dark my-4 mx-2 p-2;
+}
 
+.md > ul {
+  margin: 1rem 0;
+}
+
+.md ul, .md ol { 
+    display: block;
+    list-style: disc outside none;
+    padding: 0 0 0 1rem;
+}
+.md ol { 
+    list-style-type: decimal;
+}
+
+.md li { 
+    display: list-item;
+}
+
+.md ul ul, .md ol ul {
+    list-style-type: circle;
+    margin-left: 1rem; 
+}
+.md ol ol, .md ul ol { 
+    list-style-type: lower-latin;
+    margin-left: 1rem; 
+}
+
+.md a {
+  text-decoration: underline;
 }
 
 blockquote {
