@@ -32,8 +32,8 @@ reduce [FOUT](https://www.zachleat.com/web/webfont-glossary/#fout).
 
 ### Icons
 
-`_includes` contains the (Dripicons)[http://demo.amitjakhu.com/dripicons/] icon set. I'm using (
-eleventy-plugin-svg-contents)[https://github.com/brob/eleventy-plugin-svg-contents] to easily render the icons inline. 
+`_includes` contains the [Dripicons](http://demo.amitjakhu.com/dripicons/) icon set. I'm using [
+eleventy-plugin-svg-contents](https://github.com/brob/eleventy-plugin-svg-contents) to easily render the icons inline. 
 
 ### Images
 
