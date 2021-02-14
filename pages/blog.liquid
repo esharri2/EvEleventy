@@ -1,10 +1,16 @@
----
-title: Blog
-pagination:
-  data: collections.post
-  size: 2
-  alias: posts
-  reverse: true
+---js
+{
+  title: 'Blog',
+  pagination: {
+    data: 'collections.post',
+    size: 2,
+    alias: 'posts',
+    reverse: true,
+    before: function(data) {
+      return data.filter((item) => item.data.permalink !== false);
+    }
+  }
+}
 ---
 
 <div class="container">
