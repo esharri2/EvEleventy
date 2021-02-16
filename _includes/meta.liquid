@@ -15,11 +15,11 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{description}}">
 <meta property="og:url" content="{{domain}}">
-{% if domain and meta_img %}
-    <meta property="og:image" content="{{domain}}/images/{{meta_img}}">
+{% if domain and meta_image %}
+    <meta property="og:image" content="{{domain}}/images/{{meta_image}}">
 {% endif %}
 {% if meta_image_alt %}
-    <meta property="og:image:alt" content="{{meta_img_alt}}">
+    <meta property="og:image:alt" content="{{meta_image_alt}}">
 {% endif %}
 <meta name="twitter:card" content="summary">
 {% if twitter_handle %}
@@ -27,11 +27,11 @@
 {% endif %}
 <meta name="twitter:title" content="{{title}}">
 <meta name="twitter:description" content="{{description}}">
-{% if domain and meta_img %}
-    <meta name="twitter:image" content="{{domain}}/images/{{meta_img}}">
+{% if domain and meta_image %}
+    <meta name="twitter:image" content="{{domain}}/images/{{meta_image}}">
 {% endif %}
 {% if meta_image_alt %}
-    <meta name="twitter:image:alt" content="{{meta_img_alt}}">
+    <meta name="twitter:image:alt" content="{{meta_image_alt}}">
 {% endif %}
 {% comment %}todo - fix this canonical link{% endcomment %}
 <link rel="canonical" href="{{domain}}">
