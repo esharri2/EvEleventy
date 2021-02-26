@@ -1,5 +1,13 @@
-p + p {
-  @apply pt-4;
+html {
+  overscroll-behavior: none;
+}
+
+/* Prevent scroll bar shift when navigation between pages */
+@media screen and (min-width: 960px) {
+  main {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
 }
 
 svg {

@@ -9,7 +9,7 @@ layout: default
 
 {{view_more}}
 <article class="container pb-4">
-    {% render 'h1', text: title %}
+    {% render 'heading', level: 1, text: title%}
     <p>{% prettyDate date %}</p>
     {% render 'share', title: title, url: page.url, description: description, site: site, id: "share-a" %}
     <div class="md max-w-prose text-dark dark:text-light">
