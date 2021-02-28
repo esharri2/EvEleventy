@@ -3,7 +3,7 @@ const htmlmin = require("html-minifier");
 const minifyHTML = (eleventyConfig) => {
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
-      process.env.ELEVENTY_PRODUCTION &&
+      process.env.ELEVENTY_ENV === "production" &&
       outputPath &&
       outputPath.endsWith(".html")
     ) {
