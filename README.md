@@ -20,7 +20,7 @@ The Tailwind config has some basic customizations I like to use in projects, lik
 
 ### Dark mode
 
-Uses dark mode based on `prefers-color-scheme` (does not manually toggle.)
+Uses dark mode based on `prefers-color-scheme` and can also be manually switched with `color-switch.liquid`. User's choice pesists in local storage, superceding `prefers-color-scheme`.
 
 ### Fonts
 
