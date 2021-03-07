@@ -34,6 +34,7 @@ module.exports = {
       light: colors.babyPink,
       "light-darkened": "#b5434f",
       gray: colors.gray,
+      current: "currentColor",
     },
     container: {
       center: true,

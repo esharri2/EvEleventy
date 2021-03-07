@@ -10,6 +10,11 @@ html {
   }
 }
 
+strong {
+  /* ALERT: Change this to a numerical font weight if you are loading a bold font */
+  font-weight: bolder 
+}
+
 svg {
   fill: currentColor;
 }
