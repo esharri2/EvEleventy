@@ -1,12 +1,19 @@
 import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
 
+const dev = process.env.NODE_ENV !== "production";
 
 export default {
   input: "scripts/main.js",
   output: {
-    file: process.env.NODE_ENV ? "_site/main.js" : "_temp/main.js",
+    file: !dev ? "_site/main.js" : "_temp/main.js",
     format: "es",
   },
-  plugins: [process.env.NODE_ENV === "production" && terser()],
+  plugins: [
+    postcss({
+      extract: true,
+      extract: "main.css",
+    }),
+    !dev && terser(),
+  ],
 };
