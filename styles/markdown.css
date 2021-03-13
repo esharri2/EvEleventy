@@ -53,12 +53,12 @@ blockquote > * + * {
 
 .md ul ul,
 .md ol ul {
-  @apply ml-1;
+  @apply mt-1 ml-3;
 }
 
 .md ol ol,
 .md ul ol {
-  @apply ml-1;
+  @apply mt-1 ml-3;
 }
 
 /* LINKS */
@@ -93,6 +93,7 @@ blockquote > * + * {
 /* TABLES */
 .md table {
   border-collapse: collapse;
+
 }
 .md tr {
   @apply border-b border-dark dark:border-light;
@@ -100,4 +101,8 @@ blockquote > * + * {
 .md th,
 .md td {
   @apply text-left p-1;
+}
+
+.md td {
+  @apply border-l border-r border-dark dark:border-light;
 }
